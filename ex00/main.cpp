@@ -2,8 +2,11 @@
 
 int main(int ac, char **av)
 {
-	(void)ac;
-	ScalarConverter tst;
-	tst.convert(av[1]);
+	if(ac == 2)
+	{
+		(void)ac;
+		ScalarConverter tst;
+		tst.convert(av[1]);
+	}
 	return 0;
 }
