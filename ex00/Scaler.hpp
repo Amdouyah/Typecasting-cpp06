@@ -6,17 +6,20 @@
 #include <limits>
 
 class ScalarConverter{
-	public:
+	private :
 		ScalarConverter();
+	public:
 		ScalarConverter(const ScalarConverter &copy);
 		ScalarConverter &operator =(const ScalarConverter &copy);
 		~ScalarConverter();
-		void convert( std::string str);
+		static void convert( std::string str);
+		static void to_char(double s);
+		static void to_int(double s);
+		static void to_float(double s, int i);
+		static void to_double(double s,int i);
+		static int	count(std::string s);
+		static int ft_digit(char c);
 };
-void to_char(double s);
-void to_int(double s);
-void to_float(double s);
-void to_double(double s);
 
 
 #endif

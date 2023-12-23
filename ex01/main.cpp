@@ -15,6 +15,5 @@ int main()
 		std::cout << "incorrect\n";
 	delete s;
 	delete test2;
-
 	return 0;
 }

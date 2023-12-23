@@ -13,13 +13,13 @@ ScalarConverter &ScalarConverter::operator =(const ScalarConverter &copy){
 	return *this;
 }
 
-int ft_digit(char c){
+int ScalarConverter::ft_digit(char c){
 	if (c >= '0' && c <= '9')
 		return 1;
 	return 0;
 }
 
-int count(std::string s)
+int ScalarConverter::count(std::string s)
 {
 	int i =0;
 	int a =0;
@@ -39,22 +39,22 @@ int count(std::string s)
 	return 1;
 }
 
-void to_char(double s){
+void ScalarConverter::to_char(double s){
 	if(s >= 32 && s < 127) {
 		std::cout <<"char: '" << static_cast<char>(s) <<"\'" << std::endl;}
 	else
 		std::cout <<"char: Non displayable"<<std::endl;
 }
-void to_int(double s){
+void ScalarConverter::to_int(double s){
 	if(s >= INT_MIN && s <= INT_MAX)
 		std::cout <<"int: " << static_cast<int>(s) <<std::endl;
 	else
 		std::cout <<"int: Non displayable"<<std::endl;
 }
-void to_float(double s,int i){
+void ScalarConverter::to_float(double s,int i){
 	std::cout << std::fixed << std::setprecision(i) << "float: " << static_cast<float>(s) << "f"<<std::endl;
 }
-void to_double(double s,int i){
+void ScalarConverter::to_double(double s,int i){
 		std::cout << std::fixed << std::setprecision(i) << "double: " << static_cast<double>(s) <<std::endl;
 }
 
